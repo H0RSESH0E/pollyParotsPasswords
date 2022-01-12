@@ -5,11 +5,11 @@ var upIn = document.getElementById("upper-input");
 var loIn = document.getElementById("lower-input");
 var spIn = document.getElementById("special-input");
 var nuIn = document.getElementById("numeric-input");
+var testValue;
 
-
-
+// Validates the number of characters
 var validLe = function (){
-  var testValue = (parseInt(leIn.value,0));
+  testValue = (parseInt(leIn.value));
   console.log(testValue)
   if (testValue > 7 && testValue < 129 && Number.isInteger(testValue) && !isNaN(testValue)) {
     return true;
@@ -19,9 +19,10 @@ var validLe = function (){
   }
 };
 
+// Validates that at least one type of character is selected
 var validCharactersChosen = function (){
  if (upIn.checked || loIn.checked || spIn.checked || nuIn.checked){
- console.log("at least one character type selected")
+ console.log("at least one character type was selected")
  return true;
  }
  else {
@@ -30,9 +31,66 @@ var validCharactersChosen = function (){
 }
 
 
+var generatePassword = function(){
+  // upper case characters
+  var upperC = ['A', 'B', 'C']
+  // lowercase characters
+  var lowerC = ['a', 'b']
+  // special characters
+  var specialC = ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', "]", '^', "_", '`', '{', '|', '}', '~']
+  // numeric characters
+  var numericC = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  var arrayBank = []
+
+      if (upIn.checked) {
+        arrayBank = arrayBank.concat(upperC);
+      }
+      if (loIn.checked) {
+        arrayBank = arrayBank.concat(lowerC);
+      }
+      if (spIn.checked) {
+        arrayBank = arrayBank.concat(specialC);
+      }
+      if (nuIn.checked) {
+        arrayBank = arrayBank.concat(numericC)
+      }
+    
+
+console.log(arrayBank)
+      var concatString = "";
+
+
+
+      for (var i = 0; i < testValue; i++){
+         
+      // console.log(i + " " + arrayBank[(Math.floor(Math.random() * arrayBank.length))])
+      concatString = concatString.concat(arrayBank[(Math.floor(Math.random() * arrayBank.length))]  )
+      // var temp = temp + something[i]
+      
+
+    }
+  
+    return concatString;
+}
+
+// Write password to the #password input
+function writePassword() {
+debugger;
+  var password = generatePassword();
+  document.querySelector("#password").value = password;
+  
+  // console.log(leIn.value + " length")
+  // console.log(upIn.checked + " upper")
+  // console.log(loIn.checked + " lower")
+  // console.log(spIn.checked + " special")
+  // console.log(nuIn.checked + " numeric")
+  
+
+}
+
+// Runs promtps to get the user started (and satisfy the assignment's acceptance criteria :)  
 var firstTime = function () {
 
-  // this function will prompt for responses the first time the generator is run
     leIn.value = window.prompt("Please choose a length for your password between 8 and 128 characters.");
     if (!validLe()){
         leIn.value = window.prompt("Please enter an integer between 8 and 128 characters for your password.");
@@ -43,57 +101,22 @@ var firstTime = function () {
             if (!validLe()){
             window.alert("PEBKAC - Be well human.");
             leIn.value = Math.floor(Math.random() * (128 - 8 + 1) + 8);
-            
+            testValue = (parseInt(leIn.value));
         }
       }
     }
   }
   while (!validCharactersChosen()) {
+    window.alert("Please choose at least one type of character to use.")
     upIn.checked = window.confirm("Would you like uppercase letters used?");
     loIn.checked = window.confirm("Would you like lowercase letters used?");
     spIn.checked = window.confirm("Would you like special characters used?");
     nuIn.checked = window.confirm("Would you like numbers used?");
   }
 
-}
-  
-
-
-var validateCriteria = function() {
-  // check to see number exists
-  // check to see value is acceptable
-    // select random number for the length if not selected
-
-  // check that a character type is selected
-    // give smart ass responses
-
-  // return a bollean to break the password generate function
-}
-
-
-var generatePassword = function(){
-
-  
-  return "SUPER COMPLEX PASSWORD"
-}
-
-// Write password to the #password input
-function writePassword() {
-
-  var password = generatePassword();
-  var passwordEl = document.querySelector("#password");
-  
-  console.log(leIn.value + " length")
-  console.log(upIn.checked + " upper")
-  console.log(loIn.checked + " lower")
-  console.log(spIn.checked + " special")
-  console.log(nuIn.checked + " numeric")
-  
-  
-  passwordEl.value = password;
+writePassword()
 
 }
-
 
 
 // Add event listener to generate button
