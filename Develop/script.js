@@ -17,11 +17,16 @@ var validLe = function (){
   else {
     return false;
   }
-  
 };
 
 var validCharactersChosen = function (){
-
+ if (upIn.checked || loIn.checked || spIn.checked || nuIn.checked){
+ console.log("at least one character type selected")
+ return true;
+ }
+ else {
+   return false;
+ }
 }
 
 
@@ -43,13 +48,16 @@ var firstTime = function () {
       }
     }
   }
+  while (!validCharactersChosen()) {
     upIn.checked = window.confirm("Would you like uppercase letters used?");
     loIn.checked = window.confirm("Would you like lowercase letters used?");
     spIn.checked = window.confirm("Would you like special characters used?");
     nuIn.checked = window.confirm("Would you like numbers used?");
+  }
 
+}
   
-};
+
 
 var validateCriteria = function() {
   // check to see number exists
@@ -92,6 +100,7 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 firstTime();
+
 
 
 
