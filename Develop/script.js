@@ -1,37 +1,23 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var leIn = document.querySelector("#length-input");
-var upIn = document.querySelector("#upper-input");
-var loIn = document.querySelector("#lower-input");
-var spIn = document.querySelector("#special-input");
-var nuIn = document.querySelector("#numeric-input");
+var leIn = document.getElementById("length-input");
+var upIn = document.getElementById("upper-input");
+var loIn = document.getElementById("lower-input");
+var spIn = document.getElementById("special-input");
+var nuIn = document.getElementById("numeric-input");
 
 
 
 var validLe = function (){
-  console.log(typeof leIn.value)
-  console.log(leIn.value)
-  leIn.value = Number(leIn.value);
-  console.log(typeof leIn.value)
-  console.log(leIn.value);
-  if (Number.isInteger(leIn.value)) {
-    console.log("666true")
+  var testValue = (parseInt(leIn.value,0));
+  console.log(testValue)
+  if (testValue > 7 && testValue < 129 && Number.isInteger(testValue) && !isNaN(testValue)) {
+    return true;
   }
-
-  if (!isNaN(leIn.value)) {
-     console.log("1true")
-     if (Number.isInteger(leIn.value)) {
-      console.log("2true")
-      if (leIn.value > 7) {
-        console.log("3true")
-        if (leIn.value < 129) {
-        console.log("TRUE");
-        return true;
-  }}}}
   else {
-    console.log("False");
     return false;
-  };
+  }
+  
 };
 
 var validCharactersChosen = function (){
@@ -55,14 +41,16 @@ var firstTime = function () {
             
         }
       }
-    };
+    }
+  }
     upIn.checked = window.confirm("Would you like uppercase letters used?");
     loIn.checked = window.confirm("Would you like lowercase letters used?");
     spIn.checked = window.confirm("Would you like special characters used?");
     nuIn.checked = window.confirm("Would you like numbers used?");
 
-  }
-}
+  
+};
+
 var validateCriteria = function() {
   // check to see number exists
   // check to see value is acceptable
@@ -110,4 +98,4 @@ firstTime();
 // generateBtn.addEventListener("mouseover", ask);
 // function ask(){
 //   generateBtn.textContent = "Generate now?"
-// }
+// 

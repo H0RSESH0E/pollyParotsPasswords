@@ -19,7 +19,7 @@
         <section id="criteria">
           <h3>Password Criteria:</h3>
           <label for="length-input">Number of characters:</label>
-          <input type="text" id="length-input" placeholder="8 - 128">
+          <input type="number" id="length-input" placeholder="8 - 128" min="8" max="128" value="0">
           <label for="upper-input">Uppercase</label>
           <input type="checkbox" id="upper-input">
           <label for="upper-input">Lowercase</label>
@@ -30,7 +30,7 @@
           <input type="checkbox" id="numeric-input"> 
         </section>
         <div class="card-body">
-          <textarea
+          <textarea77
             readonly
             id="password"
             placeholder="Your Secure Password"
