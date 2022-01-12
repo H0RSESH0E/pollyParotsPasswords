@@ -77,8 +77,8 @@ console.log(arrayBank)
 function writePassword() {
 debugger;
   var password = generatePassword();
-  document.querySelector("#password").value = password;
-  
+  var passwordTextBox = document.querySelector("#password");
+  passwordTextBox = password;
   // console.log(leIn.value + " length")
   // console.log(upIn.checked + " upper")
   // console.log(loIn.checked + " lower")
