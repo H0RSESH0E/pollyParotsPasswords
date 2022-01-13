@@ -37,7 +37,6 @@ var validLe = function (){
 // FUNCTION Validates that at least one type of character is selected
 var validCharactersChosen = function (){
  if (upIn.checked || loIn.checked || spIn.checked || nuIn.checked){
- console.log("at least one character type was selected")
  return true;
  }
  else {
