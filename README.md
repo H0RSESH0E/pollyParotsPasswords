@@ -1,48 +1,41 @@
-# 03 JavaScript: Password Generator
 
-Create an application that generates a random password based on user-selected criteria. The app runs in the browser and features dynamically updated HTML and CSS powered by your JavaScript code. It has a clean and polished user interface and is responsive, which ensures that it adapts to multiple screen sizes.
+# <Your-Project-Title>Password Generator
+## U of T Coding Boot Camp: # 03 JavaScript 
+### [Installation](#installation)  - [Usage](#usage)  - [Credits](#credits)  - [License](#license) - [Features](#Features)
+&nbsp;
+## Description
+It was a challenging week!  Getting visual feedback from the browser when working on HTML and CSS was easy, intuitive, and required no new skills.  Learning the syntax of JavaScript while practicing the implementation of logic with that syntax while also placing console.logs and debuggers appropriately to test that logic and syntax was quite a few more moving parts.  
 
-If you are unfamiliar with special characters, take a look at some [examples of special characters on the OWASP Foundation website](https://www.owasp.org/index.php/Password_special_characters).
+The following is a short description of my experience completing the project:
 
-## User Story
+- It felt like a major accomplishment to see the javascript make changes to the HTML.
+- I saw again that there are many ways to implement a solution as I worked through the validation of the user inputs.
+- I recognized that the solutions I found on the web also came in many varieties.
+- I discovered that some of the web sites which seem to offer authoritative answers really aren't to be trusted.  I decided to get in touch with the pros at Ask BCS on slack.  What an amazing resource!
+- Still hard to gauge the difference between pasionate and rewarding engagement with the work and spending too long on the assignment...  :)
 
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
+![Screenshot from Chrome Developer Tools of responsive styling of the password generator](../assets/PollysPasswords.jpg)
 
-## Acceptance Criteria
+## Installation
+To set up the website:
+ - upload all the latest files from this repository along with the assets folder and all of its contents to the host server. 
+## Usage
+Use this webpage as a handy resource to create a reliably unique password.
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+See it online now at: [https://h0rsesh0e.github.io/pollyParotsPasswords/]
 
-The following image demonstrates the application functionality:
+## Credits
+This is my third project in the Coding Boot Camp provided by [The School of Continuing Studies, University of Toronto](https://learn.utoronto.ca/) and [Trilogy Education Services](https://www.trilogyed.com/).  Although this project has the least visual punch of all the projects so far, it has left me with the feeling that my capacity as a web developer has increased enormously.  Not only that, but I have begun to more fully enlist the help of my tutor who has already made a huge difference in the experience.
+## License
+All content is the property of Trilogy Education Services, The School of Continuing Studies, University of Toronto, or David Baron excluding the background image which is free to use under a creative commons license.
+## Features
+I am continuing to practice creation of SVG images.  This time I used a filtering technique to generate an SVG from a photograph.
 
-![An app window with the label Password Generator, an input field labeled Your Secure Password, and a Generate Password button.](./Assets/03-javascript-homework-demo.png)
+&nbsp;
 
-## Review
+&nbsp;
 
-You are required to submit the following for review:
+![test](./assets/images/toroid.png)
 
-* The URL of the deployed application.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+**H0RSESH0E**
