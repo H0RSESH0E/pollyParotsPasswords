@@ -11,7 +11,7 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  background-image: url(../Assets/free-use-caribbean-coast-beach-164-small.jpg);
+  background-image: url(./Assets/free-use-caribbean-coast-beach-164-small.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
