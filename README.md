@@ -14,7 +14,7 @@ The following is a short description of my experience completing the project:
 - I discovered that some of the web sites which seem to offer authoritative answers really aren't to be trusted.  I decided to get in touch with the pros at Ask BCS on slack.  What an amazing resource!
 - Still hard to gauge the difference between pasionate and rewarding engagement with the work and spending too long on the assignment...  :)
 
-![Screenshot from Chrome Developer Tools of responsive styling of the password generator](./assets/PollysPasswords.jpg)
+![Screenshot](./assets/PollysPasswords.jpg)
 
 ## Installation
 To set up the website:
@@ -35,7 +35,7 @@ I am continuing to practice creation of SVG images.  This time I used a filterin
 
 &nbsp;
 
-![](./assets/Toroid.png)
+![brand](./assets/Toroid.png)
 
 
 **H0RSESH0E**
