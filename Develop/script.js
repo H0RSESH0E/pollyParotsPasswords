@@ -7,6 +7,18 @@ var spIn = document.getElementById("special-input");
 var nuIn = document.getElementById("numeric-input");
 var testValue;
 var counter = 0;
+// upper case characters
+var upperC = ['A', 'B', 'C'];
+// lowercase characters
+var lowerC = ['a', 'b'];
+// special characters
+var specialC = ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', "]", '^', "_", '`', '{', '|', '}', '~'];
+// numeric characters
+var numericC = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+// array to store selected characters
+var arrayBank = [];
+
+
 
 // Validates the number of characters
 var validLe = function (){
@@ -32,18 +44,179 @@ var validCharactersChosen = function (){
 }
 
 
+
+// Validates Password contains all required characters
+
+function pwCriteriaCheck(pwTooCheck){
+
+var superArray = [];
+
+  if (upIn.checked) {
+    superArray.push(upperC);
+  }
+  if (loIn.checked) {
+    superArray.push(lowerC);
+  }
+  if (spIn.checked) {
+    superArray.push(specialC);
+  }
+  if (nuIn.checked) {
+    superArray.push(numericC)
+  }
+
+  console.log(superArray)
+
+  var pass = 0;
+
+  console.log("Here is the POTENTIAL PASSWORD -------------------------------------------")
+  for (var i = 0; i < pwTooCheck.length; i++) {
+    console.info(pwTooCheck[i]);
+  }
+
+
+  // Looping for as many criteria arrays as there are
+  for (k = 0; k < superArray.length; k++){
+    console.log("k-loop: ", k);
+  
+
+    //looping through upto every character in the password
+    for (l = 0; l < pwTooCheck.length; l++){
+      console.log("Pword character number: ", l, "in the: ",k, " array of the super array.");
+      console.log("Looking for a: ---------- ", pwTooCheck[l]," ----------");
+
+      // looping through the each character in each array to check for a match
+      for (m = 0; m < superArray[k].length; m++){
+        console.log("Sub-array character at index: ", m, " in the: ",k, " array of the super array.");
+
+        console.log(
+          "There are: ", pass," passes", '\n',
+          "Checking for", pwTooCheck.charAt(l), '\n',
+          "Looking in in the sub array: ", k, '\n',
+          "Comparing to: ", superArray[k][m], "(character index: ",m);
+
+        if (pwTooCheck.charAt(l) === superArray[k][m]){
+          console.log(" ---------- PASS BEING ADDED ----------  m loop being broken");
+          pass += 1;
+          break;
+        }
+        else if ( (m + 1) === superArray[k].length && (l + 1) === pwTooCheck.length) {
+          console.log("m+1 equalled the sub arrays lenght. ", m + 1, " = ", superArray[k].length);
+          return false;
+        }
+
+      }
+      if (pass === (k + 1)){
+        break;
+      }
+      else {
+
+      }
+    }
+    console.log("Sub array at index: ",k,"passed.  We have a total of ", pass, "passes.")
+    console.log("How many total passes needed = SuperArray.length: ", superArray.length)
+    
+  }
+  if (pass === superArray.length){
+    console.log("returning TRUE")
+    return true;
+  }
+  else {
+    console.log("returning FALSE")
+    debugger;
+    return false;
+  }
+
+
+  // if (pass == superArray.length){
+  //   return true;
+  // }
+  // console.log(pass, " is the number of passes")
+  // debugger;
+    
+
+}
+
+
+
+// for (i = 0; i < pwTooCheck.length; i++){
+
+//   console.log(pwTooCheck.length, "pwTooCheck length");
+//   console.log(pwTooCheck.charAt(i));
+
+//   for (j = 0; j < upperC.length; j++){
+//     console.log(i, " i ", j, " j ")
+//     console.log(upperC.length, "upperC length")
+//     console.log(upperC[j], "upperC character to check")
+
+//     if (pwTooCheck.charAt(i) == upperC[j]){
+//       console.log("Found upperC: ", upperC[j])
+//       break;
+//     }
+//     else if (upperC.length === j) {
+//       return false;
+//     }
+
+//   }
+
+//   for (j = 0; j < lowerC.length; j++){
+
+//     console.log(i, " i ", j, " j ")
+//     console.log(lowerC.length, "lowerC length")
+//     console.log(lowerC[j], "lowerC character to check")
+
+
+//     if (pwTooCheck.charAt(i) == lowerC[j]){
+//       console.log("Found lowerC: ", lowerC[j])
+//       break;
+//     }
+//     else if (lowerC.length === j) {
+//       return false;
+//     }
+
+//   }
+
+//   for (j = 0; j < specialC.length; j++){
+
+//     console.log(i, " i ", j, " j ")
+//     console.log(specialC.length, "specialC length")
+//     console.log(specialC[j], "specialC character to check")
+
+
+//     if (pwTooCheck.charAt(i) == specialC[j]){
+//       console.log("Found specialC: ", specialC[j])
+//       break;
+//     }
+//     else if (specialC.length === j) {
+//       return false;
+//     }
+
+//   }
+
+//   for (j = 0; j < numericC.length; j++){
+
+//     console.log(i, " i ", j, " j ")
+//     console.log(numericC.length, "numericC length")
+//     console.log(numericC[j], "numericC character to check")
+
+//     if (pwTooCheck.charAt(i) == numericC[j]){
+//       console.log("Found numericC: ", numericC[j])
+//       break;
+//     }
+//     else if (numericC.length === j) {
+//       return false;
+//     }
+
+//   }
+
+// }
+// }
+
+
+
 var generatePassword = function(){
-  // upper case characters
-  var upperC = ['A', 'B', 'C'];
-  // lowercase characters
-  var lowerC = ['a', 'b'];
-  // special characters
-  var specialC = ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', "]", '^', "_", '`', '{', '|', '}', '~'];
-  // numeric characters
-  var numericC = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  // array to store selected characters
-  var arrayBank = [];
+
   testValue = (parseInt(leIn.value));
+  arrayBank = [];
   console.log(arrayBank);
 
   if (upIn.checked) {
@@ -65,58 +238,17 @@ var generatePassword = function(){
   var concatString = "";
 
   // assembles the random password from the super array
-  debugger;
+  // debugger;
   for (var i = 0; i < testValue; i++){
   concatString = concatString.concat(arrayBank[(Math.floor(Math.random() * arrayBank.length))]  );
   }
 
   // Validate random selection included all desired characters
-  var arrayedArrays = [];
-
-  if (upIn.checked) {
-    arrayedArrays = arrayedArrays.push(upperC);
-  }
-  // if (spIn.checked) {
-  //   arrayedArrays = arrayedArrays.push(specialC);
-  // }
-  // if (nuIn.checked) {
-  //   arrayedArrays = arrayedArrays.push(numericC)
-  // }
-
-
-
-
-
-
-  // if (loIn.checked) {
-  //   arrayedArrays = arrayedArrays.push(lowerC);
-  // }
-
- 
- 
-
-
-  for (var i = 0; i < arrayedArrays.length; i++) {
-    console.log(i);
-  for (var j = 0; j < arrayedArrays[i].length; j++) {
-    console.log(j);
-      if (concatString.includes(arrayedArrays[i][j])) {
-        console.log("character found");
-        break;
-      }
-    
-      else {
-      console.log("character missing");
-      generatePassword();    
-      } 
-    }
+  if (!pwCriteriaCheck(concatString)){
+    return generatePassword()
   }
   
-    // search the string for any character from the arrays that were chosen
-    
-
-
-    // passes the assembled password back to the password varible within the writePassword function
+  
     return concatString;
 }
 

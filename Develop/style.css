@@ -2,6 +2,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  
 }
 
 html,
@@ -10,6 +11,9 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  background-image: url(../Assets/free-use-caribbean-coast-beach-164-small.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 body {
@@ -24,10 +28,28 @@ body {
 }
 
 header {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   padding-top: 0px;
   color: hsl(206, 17%, 28%);
+}
+
+h1 {
+  padding: 3vh;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 5px;
+  border-width: 1px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+  
+}
+
+#polly {
+  position: relative;
+  top: -4vh;
+  right: 8vw;
+  height: 150px;
 }
 
 .card {
