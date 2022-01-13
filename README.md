@@ -14,7 +14,7 @@ The following is a short description of my experience completing the project:
 - I discovered that some of the web sites which seem to offer authoritative answers really aren't to be trusted.  I decided to get in touch with the pros at Ask BCS on slack.  What an amazing resource!
 - Still hard to gauge the difference between passionate and rewarding engagement with the work and spending too long on the assignment...  :)
 
-![Screenshot](./assets/PollysPasswords.jpg)
+![Screenshot](./Assets/PollysPasswords.jpg)
 
 ## Installation
 To set up the website:
@@ -35,7 +35,7 @@ I am continuing to practice greating my own SVG images.  This time I used a filt
 
 &nbsp;
 
-![brand](./assets/Toroid.png)
+![brand](./Assets/Toroid.png)
 
 
 **H0RSESH0E**
