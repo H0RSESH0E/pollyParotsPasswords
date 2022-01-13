@@ -12,7 +12,7 @@ The following is a short description of my experience completing the project:
 - I saw again that there are many ways to implement a solution as I worked through the validation of the user inputs.
 - I recognized that the solutions I found on the web also came in many varieties.
 - I discovered that some of the web sites which seem to offer authoritative answers really aren't to be trusted.  I decided to get in touch with the pros at Ask BCS on slack.  What an amazing resource!
-- Still hard to gauge the difference between pasionate and rewarding engagement with the work and spending too long on the assignment...  :)
+- Still hard to gauge the difference between passionate and rewarding engagement with the work and spending too long on the assignment...  :)
 
 ![Screenshot](./assets/PollysPasswords.jpg)
 
@@ -29,7 +29,7 @@ This is my third project in the Coding Boot Camp provided by [The School of Cont
 ## License
 All content is the property of Trilogy Education Services, The School of Continuing Studies, University of Toronto, or David Baron excluding the background image which is free to use under a creative commons license.
 ## Features
-I am continuing to practice creation of SVG images.  This time I used a filtering technique to generate an SVG from a photograph.
+I am continuing to practice greating my own SVG images.  This time I used a filtering approach to generate an SVG from a photograph.
 
 &nbsp;
 
